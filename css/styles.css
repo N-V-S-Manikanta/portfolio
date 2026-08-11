@@ -917,14 +917,17 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .skill-category-card.full-width {
-    grid-column: 1 / -1;
-  }
+.skill-category-card.full-width {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.skill-category-card.full-width .skill-pills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: 100%;
 }
 
 .skill-category-card {
