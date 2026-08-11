@@ -1079,9 +1079,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid var(--border-color);
 }
 
-/* --------------------------------------------------------------------------
-   INTERACTIVE TIMELINE WITH FLIGHT / ROCKET SCROLL TRAVELERS
-   -------------------------------------------------------------------------- */
+/* Timeline Layout */
 .timeline-container {
   position: relative;
   max-width: 840px;
@@ -1098,7 +1096,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-/* Interactive Flight & Rocket Scroll Traveler Nodes */
 .timeline-traveler {
   position: absolute;
   left: 22px;
@@ -1310,7 +1307,9 @@ textarea.form-control {
   color: var(--accent-primary);
 }
 
-/* Responsive Overlap Safety Rules */
+/* ==========================================================================
+   RESPONSIVE MOBILE VIEWPORT OPTIMIZATIONS (PERFECT ON ALL MOBILES)
+   ========================================================================== */
 @media (max-width: 1100px) {
   .nav-links {
     gap: 0.9rem;
@@ -1322,11 +1321,20 @@ textarea.form-control {
 
 @media (max-width: 992px) {
   .hero-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     gap: 2.5rem;
     text-align: center;
   }
   
+  .hero-avatar-wrapper {
+    order: -1;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .hero-content {
     align-items: center;
   }
@@ -1347,5 +1355,40 @@ textarea.form-control {
 @media (max-width: 840px) {
   .nav-links {
     display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .avatar-frame {
+    width: 270px;
+    height: 320px;
+  }
+
+  .floating-badge-1 {
+    bottom: -20px;
+    left: 0;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .floating-badge-2 {
+    top: 10px;
+    right: 0;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .floating-badge strong {
+    font-size: 0.78rem;
+  }
+
+  .floating-badge span {
+    font-size: 0.7rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
   }
 }
